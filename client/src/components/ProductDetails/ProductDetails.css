@@ -1,0 +1,143 @@
+svg {
+  margin: auto 0;
+}
+
+.productArea {
+  padding-top: 9em;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  height: 3em;
+  padding: 1em;
+  position: fixed;
+  width: calc(100% - 2em);
+}
+
+.cartPanel {
+  display: none;
+  z-index: 1;
+  position: fixed;
+  height: 100vh;
+  width: 35%;
+  left: 65%;
+  color: white;
+  background: rgba(33, 33, 33, 0.95);
+  transition: all 0.5s;
+}
+
+#toggleCartPanel,
+#homeLink {
+  display: none;
+}
+
+.productDetailsSection {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1em;
+  background: #ddd;
+  border-radius: 1em;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.imageSection,
+.descriptionSection {
+  border-radius: 1em;
+  width: 50%;
+}
+
+.descriptionSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.productTitle {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.productPrice {
+  color: red;
+  margin: 0.25em;
+}
+
+.checkoutControlsSection {
+  display: flex;
+}
+
+#addToCartButton,
+#buyNowButton {
+  width: 45%;
+  margin: auto;
+  margin-bottom: 0.5em;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+#addToCartButton {
+  background: #fff;
+  color: black;
+}
+
+label[for="toggleCartPanel"],
+label[for="homeLink"] {
+  cursor: pointer;
+}
+
+@media (max-width: 750px) {
+  .topBar {
+    height: 2.5em;
+  }
+
+  .cartPanel {
+    left: unset;
+    width: 100vw;
+  }
+
+  .productArea {
+    padding-top: 3em;
+  }
+
+  .productDetailsSection {
+    width: unset;
+    padding: 1em;
+    max-width: none;
+    border-radius: 0;
+    flex-direction: column;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .imageSection,
+  .descriptionSection {
+    width: inherit;
+    margin: auto;
+    width: 95%;
+  }
+
+  .descriptionSection {
+    margin-top: 1em;
+  }
+
+  .checkoutControlsSection {
+    flex-direction: column;
+  }
+
+  #addToCartButton,
+  #buyNowButton {
+    width: 100%;
+    margin: 0.75em auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  .cartPanel {
+    width: 30%;
+    left: 70%;
+  }
+}

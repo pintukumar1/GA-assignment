@@ -1,0 +1,38 @@
+body {
+  background: #f3f1f2;
+  font-family: sans-serif;
+  background-color: #eee;
+  margin: unset;
+}
+
+.container {
+  padding: 1rem;
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.loginButton,
+.submitButton {
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border: 1px solid pink;
+  background: white;
+  color: black;
+  border-radius: 5px;
+}
+
+.loginButton:hover,
+.submitButton:hover {
+  background: black;
+  color: white;
+  border: 1px solid palevioletred;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+input {
+  height: 2.5rem;
+  padding: 0 1rem;
+  background-color: white;
+}
