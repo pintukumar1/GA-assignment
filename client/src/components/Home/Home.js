@@ -6,7 +6,7 @@ import Helmet from "react-helmet";
 import "../../assets/stylesheets/main.css";
 import "./Home.css";
 
-const BACKEND_URI = "https://kumarpintu-product-manager.herokuapp.com"
+const BACKEND_URI = "http://localhost:5000"
 
 export default function Home() {
   const history = useHistory();
@@ -21,7 +21,7 @@ export default function Home() {
 
   const ProductCard = ({ productInfo }) => (
     <Link
-      to={`${BACKEND_URI}/product/${productInfo._id}`}
+      to={`/product/${productInfo._id}`}
       style={{ textDecoration: "none", color: "inherit" }}
     >
       <div className="product">
@@ -88,7 +88,7 @@ export default function Home() {
 
   function searchForProducts(query) {
     axios
-      .get(`${BACKEND_URI}/products/search/${query}`)
+      .get(`/products/search/${query}`)
       .then((res) => {
         console.log(res.data);
         setProducts(res.data);

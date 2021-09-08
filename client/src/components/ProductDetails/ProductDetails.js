@@ -8,7 +8,7 @@ import Cart from "../Cart/Cart";
 import "../../assets/stylesheets/main.css"; 
 import "./ProductDetails.css";
 
-const BACKEND_URI = "https://kumarpintu-product-manager.herokuapp.com"
+const BACKEND_URI = "http://localhost:5000"
 
 export default function ProductDetails() {
   var productId = useLocation().pathname.replace(/\/*.*\//, "");

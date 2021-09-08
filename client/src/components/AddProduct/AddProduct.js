@@ -6,7 +6,7 @@ import Helmet from "react-helmet";
 import "../../assets/stylesheets/main.css";
 import "./AddProduct.css";
 
-const BACKEND_URI = "https://kumarpintu-product-manager.herokuapp.com"
+const BACKEND_URI = "http://localhost:5000"
 
 const CLOUDINARY_UPLOAD_URI =
   "https://api.cloudinary.com/v1_1/pintukumar/image/upload";

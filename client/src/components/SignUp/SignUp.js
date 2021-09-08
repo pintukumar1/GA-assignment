@@ -6,7 +6,7 @@ import Helmet from "react-helmet";
 import "../../assets/stylesheets/main.css";
 import "./SignUp.css";
 
-const BACKEND_URI = "https://kumarpintu-product-manager.herokuapp.com"
+const BACKEND_URI = "http://localhost:5000"
 
 export default function SignUp() {
   const history = useHistory();

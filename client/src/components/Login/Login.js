@@ -6,7 +6,7 @@ import Helmet from "react-helmet";
 import "../../assets/stylesheets/main.css";
 import "./Login.css";
 
-const BACKEND_URI = "https://kumarpintu-product-manager.herokuapp.com"
+const BACKEND_URI = "http://localhost:5000"
 
 export default function Login() {
   const history = useHistory();
@@ -43,8 +43,6 @@ export default function Login() {
 
   function logInToAccount(e) {
     e.preventDefault();
-
-    console.log(loginInfo);
     axios
       .post(`${BACKEND_URI}/users/login`, loginInfo)
       .then((res) => {

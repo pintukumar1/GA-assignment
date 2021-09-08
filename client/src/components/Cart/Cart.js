@@ -4,6 +4,8 @@ import NumericInput from "react-numeric-input";
 
 import "./Cart.css";
 
+const BACKEND_URI = "http://localhost:5000"
+
 export default function Cart() {
   const [productsInCart, setProductsInCart] = useState([]);
 
@@ -48,7 +50,7 @@ export default function Cart() {
 
     if (token) {
       axios
-        .get(`/cart`, {
+        .get(`${BACKEND_URI}/cart`, {
           headers: {
             "X-Auth-Token": token
           }
